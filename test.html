@@ -69,29 +69,28 @@ body {
     bottom: 9%;
     left: -20%;
     width: 25%;
-    height: calc(25% * 0.75); /* Tỷ lệ 4:3 */
+    height: 19%;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    animation: personMove1 7s linear 1 forwards, shake .6s ease-in-out infinite;
+    animation: personMove 7s linear 1 forwards, shake .6s ease-in-out infinite;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in-out;
 }
 
 .person1 {
-    animation: personMove1 7s linear 1 forwards, shake .6s ease-in-out infinite;
+    background: url('oanh2.png') no-repeat center center;
 }
 
 .person2 {
-    animation: personMove2 7s linear 1 forwards, shake .6s ease-in-out infinite;
+    background: url('lan.jpg') no-repeat center center;
     animation-delay: 2s; /* Delay animation for person2 */
 }
 
 .person3 {
-    animation: personMove3 7s linear 1 forwards, shake .6s ease-in-out infinite;
+    background: url('tuyet.jpg') no-repeat center center;
     animation-delay: 4s; /* Delay animation for person3 */
 }
-
 
 .rainbow {
     position:absolute; 
@@ -120,8 +119,8 @@ body {
   top: 47%;
   left: 50%;
   transform: translate(-50%, -50%); /* Center the envelope */
-  width: 70%;
-  height: 50%;
+  width: 50%;
+  height: 40%;
   background: pink;
   border: 5px solid white;
   border-radius: 15px;
@@ -159,42 +158,6 @@ body {
     }
 }
 
-@keyframes personMove1 {
-    0% {
-        left: -20%;
-    }
-    50% {
-        left: calc(25% + 500px);
-    }
-    100% {
-        left: calc(25% + 500px);
-    }
-}
-
-@keyframes personMove2 {
-    00% {
-        left: -20%;
-    }
-    50% {
-        left: calc(25% + 40px);
-    }
-    100% {
-        left: calc(25% + 40px);
-    }
-}
-
-@keyframes personMove3 {
-    0% {
-        left: -20%;
-    }
-    50% {
-        left: calc(25% - 400px);
-    }
-    100% {
-        left: calc(25% - 400px);
-    }
-}
-
 @keyframes shake {
     0% {
         transform: rotate(-5deg);
@@ -210,9 +173,9 @@ body {
 <div class="sun"></div>
 <div class="cloud"></div>
 <div class="grass"></div>
-<div class="person person1" style="background: url('oanh2.png') no-repeat center center;"></div>
-<div class="person person2" style="background: url('lan.jpg') no-repeat center center;"></div>
-<div class="person person3" style="background: url('tuyet.jpg') no-repeat center center;"></div>
+<div class="person person1"></div>
+<div class="person person2"></div>
+<div class="person person3"></div>
 <div class="flower" style="left: calc(50% - (100px /2));"></div> <!-- Add this line -->
 <div class="flower-2" style="left: calc(30% - (100px /2));"></div> <!-- Add this line -->
 <div class="flower-2" style="left: calc(15% - (100px /2));"></div> <!-- Add this line -->
@@ -221,18 +184,18 @@ body {
 <img class="house" src="https://media.giphy.com/media/QsnO63xQGssgEVFWIM/giphy.gif" alt="Căn nhà ở góc trên bên phải">
 <div class="envelope">
     <div class="letter">
-      <p class="message">Gửi đến toàn thể phụ nữ gia đình mình ! <br>
-        Nay là 20/10 luôn, nên con muốn gửi đến lời chúc cực đầu tư. Không gì hạnh phúc hơn được ở trong một đại gia đình luôn yêu thương giúp đỡ nhau như cả nhà ta. 
-        Và gia đình mình sẽ chả thể hình thành nếu chỉ toàn  cánh đàn ông vô vị, phụ nữ xuất hiện chính là để đem đến sắc màu tươi vui cho tất cả, và trong số đó bà Tuyết, mẹ Oanh và mẹ Lan chính là hạt gia vị lấp lánh đậm đà nhất. chúc bà và mẹ có một ngày hôm nay nay tươi mới và sắc màu, và ngày mai chính là ánh sáng của sự hạnh phúc <br>
-        P/s: Đây hoàn toàn sản phẩm là sự đầu tư công sức và chất xám vào từng chi tiết đến cả lời chúc, nên không có sự nhúng tay của AI vào lời chúc đâu ạ, con biết văn con thiểu năng rồi 😭
+      <p class="message">Gửi hạt đậu nhỏ chúc mừng ngày 20/10 , <br>
+        gửi tới em iu của anh một cô nàng mang linh hồn của cung bọ cạp thông minh bướng bỉnh, 
+       mạnh mẽ tràn đầy nhiệt huyết , mong rằng hôm nay và những ngày sau đều sẽ luôn luôn vui vẻ hạnh phúc, đạt được mục tiêu của mình, 
+        anh sẽ luôn bên em , yêu em , ủng hộ em , yêu em nhiều lắm hạt đậu của ah ạ.
      </p>
     </div>
   </div>
 
 <script>
     window.onload = function() {
-       var person1 = document.querySelector('.person1');
-       person1.addEventListener('animationend', function() {
+       var person = document.querySelector('.person');
+       person.addEventListener('animationend', function() {
           var rainbow = document.querySelector('.rainbow');
           rainbow.style.visibility = 'visible';
           var envelope = document.querySelector('.envelope');
