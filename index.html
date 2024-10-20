@@ -176,10 +176,10 @@ body {
         left: -20%;
     }
     50% {
-        left: calc(25% + 40px);
+        left: calc(25% + 120px);
     }
     100% {
-        left: calc(25% + 40px);
+        left: calc(25% + 120px);
     }
 }
 
@@ -188,10 +188,10 @@ body {
         left: -20%;
     }
     50% {
-        left: calc(25% - 400px);
+        left: calc(25% - 300px);
     }
     100% {
-        left: calc(25% - 400px);
+        left: calc(25% - 300px);
     }
 }
 
@@ -201,6 +201,112 @@ body {
     }
     100% {
         transform: rotate(5deg);
+    }
+}
+
+
+
+
+ /* Media queries for responsive design */
+ @media (max-width: 768px) {
+    .person {
+        width: 50%;
+        height: calc(50% * 0.75); /* Tỷ lệ 4:3 */
+    }
+
+    .envelope {
+        width: 80%;
+    }
+
+    .letter {
+        font-size: 1.2em;
+    }
+
+    @keyframes personMove1 {
+        0% {
+            left: -20%;
+        }
+        50% {
+            left: calc(25% + 40%);
+        }
+        100% {
+            left: calc(25% + 40%);
+        }
+    }
+
+    @keyframes personMove2 {
+        0% {
+            left: -20%;
+        }
+        50% {
+            left: calc(25% + 12%);
+        }
+        100% {
+            left: calc(25% + 12%);
+        }
+    }
+
+    @keyframes personMove3 {
+        0% {
+            left: -20%;
+        }
+        50% {
+            left: calc(25%);
+        }
+        100% {
+            left: calc(25%);
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .person {
+        width: 70%;
+        height: calc(70% * 0.75); /* Tỷ lệ 4:3 */
+    }
+
+    .envelope {
+        width: 90%;
+    }
+
+    .letter {
+        font-size: 1em;
+    }
+
+    @keyframes personMove1 {
+        0% {
+            left: -20%;
+        }
+        50% {
+            left: calc(25% + 50%);
+        }
+        100% {
+            left: calc(25% + 50%);
+        }
+    }
+
+    @keyframes personMove2 {
+        0% {
+            left: -20%;
+        }
+        50% {
+            left: calc(25% + 12%);
+        }
+        100% {
+            left: calc(25% + 12%);
+        }
+    }
+
+    @keyframes personMove3 {
+        0% {
+            left: -20%;
+        }
+        50% {
+            left: calc(25%);
+        }
+        100% {
+            left: calc(25%);
+        }
     }
 }
 </style>
